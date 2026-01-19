@@ -1,4 +1,4 @@
----
+
 # AI-Ready Analytics Engineering Platform
 
 > **Product Performance & Demand Intelligence**
@@ -97,6 +97,3 @@ The following table demonstrates how this project aligns with core AMD requireme
 | **Stakeholder Alignment** | Business-first modeling approach |
 
 ---
-
-**Next Steps:**
-Would you like me to help you draft the content for the `data_modeling.md` file or create the specific SQL schema for the **Staging** layer?
