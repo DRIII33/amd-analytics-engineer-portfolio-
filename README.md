@@ -1,82 +1,65 @@
-##AI-Ready Analytics Engineering Platform for Product Performance & Demand Intelligence
-Author
+---
+# AI-Ready Analytics Engineering Platform
+
+> **Product Performance & Demand Intelligence**
 
 **Author:** Daniel Rodriguez III
-*Candidate for Data Analytics Engineer – AMD*
 
-###Executive Summary (Hiring Manager Pitch)
+**Candidate for:** Data Analytics Engineer – AMD
 
-This project demonstrates how I would solve the exact analytics engineering challenges AMD is facing today: fragmented metrics, inconsistent definitions across teams, analytics bottlenecks, and AI tools constrained by unreliable data foundations.
------
+---
 
-Rather than building dashboards first, this project establishes a semantic, analytics-engineered data platform designed to:
+##  Executive Summary
 
-* Standardize product, yield, demand, and performance metrics
+This project demonstrates a proactive solution to the exact analytics engineering challenges faced by high-growth semiconductor leaders: **fragmented metrics, inconsistent definitions, and AI tools constrained by unreliable data foundations.**
 
-* Eliminate dashboard-side complexity (no blends, no fragile calculated fields)
+Rather than building "dashboard-first," this project establishes a **semantic, analytics-engineered data platform** designed to:
 
-* Enable self-service, AI-ready analytics
+* **Standardize** product, yield, demand, and performance metrics.
+* **Eliminate** dashboard-side complexity (no blends or fragile calculated fields).
+* **Enable** self-service, AI-ready analytics.
+* **Scale** across engineering, operations, and executive stakeholders.
 
-* Scale across engineering, operations, and executive stakeholders
+**The result:** A decision-ready analytics system, not just a collection of reports.
 
-The result is a decision-ready analytics system, not just reports.
+---
 
-###Business Scenario (AMD-Aligned)
+##  Business Scenario (AMD-Aligned)
 
-**AMD operates at the intersection of:**
-
-* Advanced silicon engineering
-
-* High-volume manufacturing
-
-* AI accelerator performance optimization
-
-* Volatile global demand
-
-**Leadership and product teams face recurring questions:**
+AMD operates at the intersection of advanced silicon engineering, high-volume manufacturing, and AI accelerator optimization. Leadership and product teams frequently face critical questions:
 
 * Which products underperform demand expectations?
-
 * How do yield losses translate into revenue impact?
-
 * Are performance regressions engineering issues or manufacturing constraints?
-
 * Can we trust AI-driven insights across teams?
 
-Today, answers are slow, inconsistent, and team-specific.
+###  Business Problem
 
-###Business Problem
+Currently, the lack of a unified data foundation leads to:
 
-  **AMD lacks a unified, analytics-engineered data foundation that ensures consistent, trustworthy metrics for AI-driven decision-making across engineering and business teams.**
+1. **Conflicting KPIs** across different departmental dashboards.
+2. **Manual SQL Dependency** creating bottlenecks for non-technical stakeholders.
+3. **Overloaded Dashboards** (e.g., Looker Studio) performing heavy transformations at runtime.
+4. **AI Inconsistency** where LLMs produce hallucinations due to poor semantic modeling.
 
-**Symptoms:**
+---
 
-* Conflicting KPIs across dashboards
+##  Solution Architecture
 
-* Manual SQL dependency
+This project implements a **Modern Analytics Engineering Stack** where all business logic lives in the data warehouse, not the visualization layer.
 
-* Looker Studio dashboards overloaded with calculated fields
+* **Python (Colab):** Realistic synthetic data generation and validation.
+* **BigQuery:** Scalable warehouse with modeled semantic views.
+* **DBT-style SQL:** Structured transformation layers (Raw → Staging → Analytics).
+* **Looker Studio:** A "thin" visualization layer for reporting.
+* **AI-Ready Metrics:** Natural-language compatible schema.
 
-* AI tools producing inconsistent results due to poor semantic modeling
+---
 
-###Solution Architecture (What This Project Delivers)
-**Modern Analytics Engineering Stack**
+##  Repository Structure
 
-* **Python (Colab):** Realistic synthetic data generation + validation
-
-* **BigQuery:** Scalable warehouse with modeled semantic views
-
-* **DBT-style SQL:** Raw → Staging → Analytics layers
-
-* **Looker Studio:** Thin visualization layer only
-
-* **AI-Ready Metrics:** Natural-language compatible
-
-####Key Design Principle
-
-*All business logic lives in SQL views — not dashboards*
-
-'amd-analytics-engineer-portfolio/
+```text
+amd-analytics-engineer-portfolio/
 ├── README.md
 ├── docs/
 │   ├── business_problem.md
@@ -94,16 +77,26 @@ Today, answers are slow, inconsistent, and team-specific.
 │   └── dashboard_design.md
 └── governance/
     ├── metric_definitions.md
-    └── data_quality_checks.sql'
+    └── data_quality_checks.sql
 
-**PROJECT TAKEAWAYS**
-    
-| AMD Requirement       | Demonstrated            |
-| --------------------- | ----------------------- |
-| Scalable pipelines    | Python + ELT            |
-| DBT modeling          | Semantic SQL views      |
-| Snowflake readiness   | Equivalent SQL          |
-| Data quality          | Validation & governance |
-| AI-driven analytics   | NLP-ready metrics       |
-| Stakeholder alignment | Business-first modeling |
+```
 
+---
+
+##  Capability Mapping
+
+The following table demonstrates how this project aligns with core AMD requirements:
+
+| AMD Requirement | Demonstrated Capability |
+| --- | --- |
+| **Scalable Pipelines** | Python + ELT Workflow |
+| **DBT Modeling** | Multi-layered Semantic SQL Views |
+| **Snowflake Readiness** | Equivalent SQL syntax provided for cross-platform utility |
+| **Data Quality** | Integrated Validation & Governance scripts |
+| **AI-Driven Analytics** | NLP-ready metrics and flattened schemas |
+| **Stakeholder Alignment** | Business-first modeling approach |
+
+---
+
+**Next Steps:**
+Would you like me to help you draft the content for the `data_modeling.md` file or create the specific SQL schema for the **Staging** layer?
